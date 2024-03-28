@@ -72,12 +72,13 @@ def test_case_02(driver)->None: #로그인 = 카드로인증
     설정.waitElement(driver, 변수.비번xpath9).click()
     설정.waitElement(driver, 변수.비번xpath5).click()
     설정.waitElement(driver, 변수.비번xpath5).click()
+
     time.sleep(2) #카드비번=1212
     설정.waitElement(driver, 변수.비번xpath1).click()
     설정.waitElement(driver, 변수.비번xpath2).click()
-    time.sleep(2) #간편번호설정=1212
 
-    # 반복 횟수 설정
+    time.sleep(2) #간편번호설정=121212 / 재입력확인=121212
+    # 간편번호설정 반복 횟수 설정
     num_iterations = 6  # 반복하려는 횟수를 설정하세요.
     # 반복 실행
     for i in range(num_iterations):
