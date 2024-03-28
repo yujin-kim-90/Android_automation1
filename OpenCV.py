@@ -41,20 +41,20 @@ def test():
     return test_Directory
 class Matching():
     def detectimage(name):
-        currentPath = '%s/' % os.getcwd()
+       #currentPath = '%s/' % os.getcwd()
         #test_Directory = currentPath + '/'
 
-        if not os.path.exists(currentPath):
-            os.makedirs(currentPath)
+        if not os.path.exists(간편번호설정.currentPath):
+            os.makedirs(간편번호설정.currentPath)
 
         wait = WebDriverWait(driver, 20)
 
-        screenshotPath = currentPath + '%s-screenshot.png'
+        #screenshotPath = currentPath + '%s-screenshot.png'
         detectImagePath = '/Users/yujin/PycharmProjects/Android_automation/assets/' + name
 
-        driver.save_screenshot(screenshotPath)
+        #driver.save_screenshot(간편번호설정.screenshotPath)
 
-        sourceimage = cv2.imread(screenshotPath, 0)
+        sourceimage = cv2.imread(간편번호설정.screenshotPath, 0)
         template = cv2.imread(detectImagePath, 0)
 
         w, h = template.shape[::-1]
@@ -73,7 +73,7 @@ class Matching():
         color = (0, 0, 255)
         cv2.rectangle(sourceimage, top_left, bottom_right, color, thickness=8)
 
-        detectshotPath = screenshotPath[:-4] + '-detect.png'
+        detectshotPath = 간편번호설정.screenshotPath[:-4] + '-detect.png'
         cv2.imwrite(detectshotPath, sourceimage)
 
         return center

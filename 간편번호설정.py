@@ -4,6 +4,7 @@ import OpenCV
 import random
 import pytest
 import time
+import os
 
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
@@ -25,21 +26,27 @@ def driver():
     yield driver
     driver.quit()
 
+#여기서 현재경로 보여주고
+currentPath = '%s/' % os.getcwd()
+screenshotPath = currentPath + '%s-screenshot.png'
 
 #로그인 > 로그인(간편번호)
 def test_case_01(driver)->None:
     driver.find_element(By.XPATH, 변수.앱이름).click()
     time.sleep(10)
-    driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
-    time.sleep(3)
+    #driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
+    #time.sleep(3)
     driver.find_element(By.XPATH, 변수.로그인xpath).click()
     time.sleep(3)
     driver.find_element(By.ID, 변수.로그인_이름Id).send_keys(변수.고객명)
     driver.find_element(By.ID, 변수.로그인_주민번호Id).send_keys(변수.생년월일)
     driver.find_element(By.ID, 변수.로그인_주민뒷자리Id).click()
     time.sleep(3)
+    #opencv 이용할 때, 스크린샷 한번해주고 , 파일명 선언 필요해요
+    driver.save_screenshot(screenshotPath)
     name= '1_keypad_login.png'
     driver.tap([OpenCV.Matching.detectimage(name)])
+
     driver.find_element(By.XPATH, 변수.로그인_통신사).click()
     driver.find_element(By.ID, 변수.로그인_간편번호_인증요청).click()
 
