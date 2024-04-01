@@ -27,21 +27,15 @@ def driver():
     yield driver
     driver.quit()
 
-#로그인 > 로그인(간편번호)
-def test_case_01(driver)->None:
+
+#TC : 로그인 및 인증 = 카드로 인증
+def test_case_01(driver)->None: #log24
     설정.waitElement(driver, 변수.앱이름).click()
-    # 설정.waitElement(driver, 변수.로그인xpath).click()
-    # for i in range(0,5):
-    #     for i in range(0,6):
-    #         설정.waitElement(driver, '//android.widget.ImageView[@content-desc="1"]').click()
-    #     driver.find_element(By.ID, 변수.간편번호불일치Id).click()
-    #     #설정.waitElement(driver, 변수.간편번호불일치xpath).click()
-
-
-def test_case_02(driver)->None: #로그인 = 카드로인증
     설정.waitElement(driver, 변수.로그인).click()
     time.sleep(4)
     설정.waitElement(driver, 변수.카드로인증).click()
+
+def test_case_02(driver)->None: #log26
     #아래 비번입력 (간단히 배열로 정리 예정)
     설정.waitElement(driver, 변수.비번xpath5).click() #카드번호='5342929700036003'
     설정.waitElement(driver, 변수.비번xpath3).click()  # 카드번호='5342929700036003'
@@ -60,7 +54,7 @@ def test_case_02(driver)->None: #로그인 = 카드로인증
     설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
     설정.waitElement(driver, 변수.비번xpath3).click()  # 카드번호='5342929700036003'
 
-    #유효기간입력
+    #유효기간입력.
     # 설정.waitElement(driver, 변수.유효기간xpath).click()
     time.sleep(3) #0125카드유효기간
     common.xyTouch(driver, 400, 2173) #0입력
@@ -77,17 +71,16 @@ def test_case_02(driver)->None: #로그인 = 카드로인증
     설정.waitElement(driver, 변수.비번xpath1).click()
     설정.waitElement(driver, 변수.비번xpath2).click()
 
+    def test_case_03(driver) -> None:  # log26
+
     time.sleep(2) #간편번호설정=121212 / 재입력확인=121212
     # 간편번호설정 반복 횟수 설정
-    num_iterations = 6  # 반복하려는 횟수를 설정하세요.
-    # 반복 실행
+    num_iterations = 6
     for i in range(num_iterations):
         설정.waitElement(driver, 변수.비번xpath1).click()
         설정.waitElement(driver, 변수.비번xpath2).click()
 
     설정.waitElement(driver, 변수.지문닫기).click()
-
-
 
 
 
