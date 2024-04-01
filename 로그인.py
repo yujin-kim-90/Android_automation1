@@ -1,11 +1,8 @@
 import 변수
 import 설정
 import common
-import random
 import pytest
 import time
-import setting
-
 
 from appium import webdriver
 from appium.options.android import UiAutomator2Options

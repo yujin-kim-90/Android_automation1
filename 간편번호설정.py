@@ -1,18 +1,13 @@
 import 변수
-import 설정
 import OpenCV
-import random
 import pytest
 import time
 import os
 
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
-from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from appium.webdriver import WebElement
-from selenium.webdriver.support.wait import WebDriverWait
+
 
 @pytest.fixture(scope="module")
 def driver():
@@ -38,6 +33,7 @@ def test_case_01(driver)->None:
     time.sleep(10)
     driver.find_element(By.ID, 변수.로그인id).click()
     time.sleep(3)
+
     driver.find_element(By.ID, 변수.로그인_이름Id).send_keys(변수.고객명)
     driver.find_element(By.ID, 변수.로그인_주민번호Id).send_keys(변수.생년월일)
     driver.find_element(By.ID, 변수.로그인_주민뒷자리Id).click()
