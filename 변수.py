@@ -16,6 +16,8 @@
 로그인_간편번호_인증번호입력id='com.lcacApp:id/et_bottom_sheet_auth_number_input_auth_number'
 시작하기_로그인Id='com.lcacApp:id/bt_tutorial_login'
 시작하기_로그인xpath='//android.widget.Button[@content-desc="로그인 버튼"]'
+인증번호_발송_id='com.lcacApp:id/bt_loca_confirm'
+지문등록시트_x버튼='com.lcacApp:id/ib_bottom_sheet_finger_print_register_induce_close'
 
 로그인= '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.Button'
 다른로그인방법= '//android.widget.TextView[@content-desc="다른 로그인 방법 버튼"]'

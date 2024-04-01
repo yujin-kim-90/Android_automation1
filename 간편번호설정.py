@@ -52,11 +52,22 @@ def test_case_01(driver)->None:
     time.sleep(5)
     driver.find_element(By.ID, 변수.로그인_간편번호_전체동의하고인증id).click()
     time.sleep(10)
+    driver.find_element(By.ID, 변수.인증번호_발송_id).click()
     driver.find_element(By.ID, 변수.로그인_간편번호_인증번호입력id).send_keys("111111")
+    time.sleep(10)
+def test_case_02(driver)->None:
+    for i in range(2):
+        driver.save_screenshot(screenshotPath)
+        for i in range(3):
+            name= 'card_setting_1.png'
+            driver.tap([OpenCV.Matching.detectimage(name)])
+            name = 'card_setting_4.png'
+            driver.tap([OpenCV.Matching.detectimage(name)])
+            time.sleep(2)
+
+    driver.find_element(By.ID, 변수.지문등록시트_x버튼).click()
 
 
-
-' '
 
 
 
