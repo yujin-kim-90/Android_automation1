@@ -71,7 +71,7 @@ def test_case_02(driver)->None: #log26
     설정.waitElement(driver, 변수.비번xpath1).click()
     설정.waitElement(driver, 변수.비번xpath2).click()
 
-    def test_case_03(driver) -> None:  # log26
+def test_case_03(driver) -> None:  # log27
 
     time.sleep(2) #간편번호설정=121212 / 재입력확인=121212
     # 간편번호설정 반복 횟수 설정
