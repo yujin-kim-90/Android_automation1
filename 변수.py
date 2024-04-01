@@ -12,6 +12,8 @@
 로그인_통신사='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]'
 로그인_간편번호_인증요청='com.lcacApp:id/bt_mobile_phone_auth_bottom_auth'
 로그인_간편번호_인증요청xpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button'
+로그인_간편번호_전체동의하고인증id='com.lcacApp:id/bt_bottom_sheet_mobile_phone_terms_auth'
+로그인_간편번호_인증번호입력id='com.lcacApp:id/et_bottom_sheet_auth_number_input_auth_number'
 시작하기_로그인Id='com.lcacApp:id/bt_tutorial_login'
 시작하기_로그인xpath='//android.widget.Button[@content-desc="로그인 버튼"]'
 
