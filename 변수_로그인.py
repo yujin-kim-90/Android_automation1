@@ -13,3 +13,4 @@
 간편번호재설정_통신사='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]'
 간편번호재설정_확인문구id='com.lcacApp:id/tv_default_setting_complete_msg'
 간편번호재설정_설정확인id='com.lcacApp:id/bt_default_setting_complete_confirm'
+홈확인='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[1]/android.widget.TextView'

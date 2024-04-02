@@ -98,6 +98,9 @@ def test_case_03(driver)->None:
             time.sleep(2)
 
     assert driver.find_element(By.ID, 변수_로그인.간편번호재설정_확인문구id).text == "간편번호가 설정되었습니다."
+
+#tc_id: log_06
 def test_case_04(driver)->None:
     driver.find_element(By.ID, 변수_로그인.간편번호재설정_설정확인id).click()
     time.sleep(10)
+    assert driver.find_element(By.XPATH, 변수_로그인.홈확인).text == "홈"

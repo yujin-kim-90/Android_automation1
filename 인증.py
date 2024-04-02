@@ -1,4 +1,6 @@
 import 변수
+import 변수_인증
+import 변수_로그인
 import OpenCV
 import pytest
 import time
@@ -25,17 +27,26 @@ def driver():
 currentPath = '%s/' % os.getcwd()
 screenshotPath = currentPath + '%s-screenshot.png'
 
-#로그인 > 로그인(간편번호)
+#tc_id: log_20
 def test_case_01(driver)->None:
+    driver.find_element(By.XPATH, 변수.앱이름).click()
+    time.sleep(10)
+    driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
+    time.sleep(10)
+    driver.find_element(By.ID, 변수.로그인id).click()
+    time.sleep(3)
 
+    assert driver.find_element(By.XPATH, 변수_인증.홈확인).text == "홈"
 
+#tc_id: log_22
+def test_case_02(driver)->None:
     driver.find_element(By.ID, 변수.로그인_이름Id).send_keys(변수.고객명)
     driver.find_element(By.ID, 변수.로그인_주민번호Id).send_keys(변수.생년월일)
     driver.find_element(By.ID, 변수.로그인_주민뒷자리Id).click()
     time.sleep(3)
-    #opencv 이용할 때, 스크린샷 한번해주고 , 파일명 선언 필요해요
+
     driver.save_screenshot(screenshotPath)
-    name= '1_keypad_login.png'
+    name = '1_keypad_login.png'
     driver.tap([OpenCV.Matching.detectimage(name)])
 
     driver.find_element(By.XPATH, 변수.로그인_통신사).click()
@@ -46,7 +57,9 @@ def test_case_01(driver)->None:
     driver.find_element(By.ID, 변수.인증번호_발송_id).click()
     driver.find_element(By.ID, 변수.로그인_간편번호_인증번호입력id).send_keys("111111")
     time.sleep(10)
-def test_case_02(driver)->None:
+    assert driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text == "간편번호 설정"
+
+def test_case_03(driver)->None:
     for i in range(2):
         driver.save_screenshot(screenshotPath)
         for i in range(3):
@@ -58,10 +71,5 @@ def test_case_02(driver)->None:
 
     driver.find_element(By.ID, 변수.지문등록시트_x버튼).click()
 
-
-
-
-
-
-
-
+    time.sleep(10)
+    
