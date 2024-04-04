@@ -11,3 +11,11 @@ ars인증요청id='com.lcacApp:id/bt_ars_auth_bottom_for_test'
 아이디비번설정id='com.lcacApp:id/tv_login_id_pw_change'
 
 카드번호입력id='com.lcacApp:id/tv_card_auth_full_card_number'
+카드인증버튼id='com.lcacApp:id/bt_card_auth_full_auth'
+
+유효기간월id='com.lcacApp:id/et_card_auth_full_expiry_date_month'
+유효기간년도id='com.lcacApp:id/et_card_auth_full_expiry_date_year'
+
+아이디비번설정x버튼id='com.lcacApp:id/ib_all_top_close'
+
+본인인증휴대폰='//android.widget.TextView[@content-desc="휴대폰버튼"]'
