@@ -34,22 +34,26 @@ def test_case_01(driver)->None: #log24
 
 def test_case_02(driver)->None: #log26
     #아래 비번입력 (간단히 배열로 정리 예정)
-    설정.waitElement(driver, 변수.비번xpath5).click() #카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath3).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath4).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath2).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath9).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath2).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath9).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath7).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath3).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath6).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
-    설정.waitElement(driver, 변수.비번xpath3).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath5).click() #카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath3).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath4).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath2).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath9).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath2).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath9).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath7).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath3).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath6).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath0).click()  # 카드번호='5342929700036003'
+    # 설정.waitElement(driver, 변수.비번xpath3).click()  # 카드번호='5342929700036003'
+    for i in range(len(변수.카드번호)):
+        #driver.find_element(By.XPATH, 변수_인증.카드번호입력id).click()
+        str="//android.widget.ImageView[@content-desc="""+변수.카드번호[i]+"]"""
+        driver.find_element(By.XPATH,str).click()
 
     #유효기간입력.
     # 설정.waitElement(driver, 변수.유효기간xpath).click()
