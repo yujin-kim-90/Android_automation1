@@ -1,8 +1,7 @@
 #인증 > 간편번호(휴대폰 인증)
 import common
-import 변수
-import 변수_인증
-import 변수_로그인
+from 변수 import 변수
+from 변수 import 변수_인증
 import OpenCV
 import pytest
 import time

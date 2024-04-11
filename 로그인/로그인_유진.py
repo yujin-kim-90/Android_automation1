@@ -1,5 +1,5 @@
-import 변수
-import 변수_로그인
+from 변수 import 변수
+from 변수 import 변수_로그인
 import OpenCV
 import pytest
 import time
@@ -7,11 +7,8 @@ import os
 
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
-from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from appium.webdriver import WebElement
-from selenium.webdriver.support.wait import WebDriverWait
+
 
 @pytest.fixture(scope="module")
 def driver():

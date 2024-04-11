@@ -1,4 +1,4 @@
-import 변수
+from 변수 import 변수
 import 설정
 import common
 import pytest

@@ -1,19 +1,14 @@
-import 변수
-import 변수_인증
+from 변수 import 변수
+from 변수 import 변수_인증
 import time
 import os
 import OpenCV
 
-from selenium.common import TimeoutException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.actions import interaction
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from appium.webdriver import WebElement
-from selenium.webdriver.support.wait import WebDriverWait
-
 
 #여기서 현재경로 보여주고
 currentPath = '%s/' % os.getcwd()
