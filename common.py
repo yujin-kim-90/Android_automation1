@@ -73,3 +73,23 @@ def 간편번호설정(driver):
             name = 'card_setting_4.png'
             driver.tap([OpenCV.Matching.detectimage(name)])
             time.sleep(2)
+
+def 아이디비밀번호설정(driver):
+    time.sleep(1)
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""1""]").click()
+    time.sleep(1)
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""q 비읍""]").click()
+    time.sleep(1)
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""2""]").click()
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""w 지읃""]").click()
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""3""]").click()
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""e 디귿""]").click()
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""4""]").click()
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""r 기역""]").click()
+    # 비밀번호=["1", "q %s 비읍", "2", "w %s 지읃", "3","e %s 디귿","4","r %s 기역"]
+    # for i in range(len(비밀번호)):
+    #     str="//android.widget.ImageView[@content-desc="""+비밀번호[i]+"]"""
+    #     driver.find_element(By.XPATH,str).click()
+    str="//android.widget.ImageView[@content-desc=""특수문자변경""]"
+    driver.find_element(By.XPATH,str).click()
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""느낌표""]").click()

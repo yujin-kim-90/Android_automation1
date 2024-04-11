@@ -19,3 +19,8 @@ ars인증요청id='com.lcacApp:id/bt_ars_auth_bottom_for_test'
 아이디비번설정x버튼id='com.lcacApp:id/ib_all_top_close'
 
 본인인증휴대폰='//android.widget.TextView[@content-desc="휴대폰버튼"]'
+닫기버튼id='com.lcacApp:id/ib_all_top_close'
+
+아이디입력id='com.lcacApp:id/lcet_id_password_input_id'
+비번입력id='com.lcacApp:id/tv_id_password_input_change_password'
+비번확인id='com.lcacApp:id/tv_id_password_input_change_password_confirm'
