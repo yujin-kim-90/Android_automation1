@@ -5,6 +5,7 @@ from 변수 import 변수_인증
 import common
 import pytest
 import time
+import os
 
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
@@ -22,6 +23,7 @@ def driver():
     driver.press_keycode(3)
     yield driver
     driver.quit()
+
 
 #tc_id: log_33
 def test_case_01(driver)->None:

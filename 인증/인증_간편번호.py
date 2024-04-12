@@ -24,16 +24,12 @@ def driver():
     yield driver
     driver.quit()
 
-#여기서 현재경로 보여주고
-currentPath = '%s/' % os.getcwd()
-screenshotPath = currentPath + '%s-screenshot.png'
-
 #tc_id: log_20
 def test_case_01(driver)->None:
     driver.find_element(By.XPATH, 변수.앱이름).click()
-    time.sleep(10)
-    driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
-    time.sleep(10)
+    time.sleep(20)
+    # driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
+    # time.sleep(10)
     driver.find_element(By.ID, 변수.로그인id).click()
     time.sleep(3)
 
@@ -52,7 +48,7 @@ def test_case_03(driver)->None:
     driver.find_element(By.ID, 변수.지문등록시트_x버튼).click()
     time.sleep(10)
 
-    driver.save_screenshot(screenshotPath)
+    driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test_currentPath()))
     name='card_setting_1.png'
     driver.tap([OpenCV.Matching.detectimage(name)])
     name = 'card_setting_2.png'

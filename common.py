@@ -51,9 +51,9 @@ def 휴대폰인증(driver):
     driver.find_element(By.ID, 변수.로그인_주민뒷자리Id).click()
     time.sleep(3)
 
-    driver.save_screenshot(screenshotPath)
+    #driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test_currentPath()))
     name = '1_keypad_login.png'
-    driver.tap([OpenCV.Matching.detectimage(name)])
+    driver.tap([OpenCV.Matching.detectimage(driver,name)])
 
     driver.find_element(By.XPATH, 변수.로그인_통신사).click()
     driver.find_element(By.ID, 변수.로그인_간편번호_인증요청).click()
@@ -78,15 +78,22 @@ def 아이디비밀번호설정(driver):
     time.sleep(1)
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""1""]").click()
     time.sleep(1)
-    str="//android.widget.ImageView[@content-desc=""q .비읍""]"
-    driver.find_element(By.XPATH,str).click()
+    name='q.png'
+    driver.tap([OpenCV.Matching.detectimage(name)])
+    #driver.find_element(By.XPATH,"//android.widget.ImageView[normalize-space(@content-desc)=""q 비읍"")]").click()
     time.sleep(1)
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""2""]").click()
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""w 지읃""]").click()
+    name = 'w.png'
+    driver.tap([OpenCV.Matching.detectimage(name)])
+    #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""w 지읃""]").click()
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""3""]").click()
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""e 디귿""]").click()
+    name = 'e.png'
+    driver.tap([OpenCV.Matching.detectimage(name)])
+    #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""e 디귿""]").click()
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""4""]").click()
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""r 기역""]").click()
+    name = 'r.png'
+    driver.tap([OpenCV.Matching.detectimage(name)])
+    #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""r 기역""]").click()
     # 비밀번호=["1", "q %s 비읍", "2", "w %s 지읃", "3","e %s 디귿","4","r %s 기역"]
     # for i in range(len(비밀번호)):
     #     str="//android.widget.ImageView[@content-desc="""+비밀번호[i]+"]"""

@@ -1,1 +1,1 @@
-print("//android.widget.ImageView[@content-desc=""""q 비읍""""]")
+print("//android.widget.ImageView[@content-desc=""1""]")
