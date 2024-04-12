@@ -35,29 +35,26 @@ class TS():
     def makeTS(self):
         return str(int(datetime.datetime.now().timestamp()))
 
-def test(currentPath):
+def test():
+    currentPath = '%s/' % os.getcwd()
     test_Directory = currentPath + '/'
     return test_Directory
 def test_screenshot(test_directory):
     screenshotPath = test_directory + '%s-screenshot.png'
     return screenshotPath
 
-def test_currentPath():
-    currentPath = '%s/' % os.getcwd()
-    return currentPath
-
 class Matching():
     def detectimage(driver,name):
-        if not os.path.exists(test(test_currentPath())):
-            os.makedirs(test(test_currentPath()))
+        if not os.path.exists(test()):
+            os.makedirs(test())
 
         wait = WebDriverWait(driver, 20)
 
         detectImagePath = '/Users/yujin/PycharmProjects/Android_automation/assets/' + name
 
-        driver.save_screenshot(test_screenshot(test(test_currentPath())))
+        driver.save_screenshot(test_screenshot(test()))
 
-        sourceimage = cv2.imread(test_screenshot(test(test_currentPath())), 0)
+        sourceimage = cv2.imread(test_screenshot(test()), 0)
         template = cv2.imread(detectImagePath, 0)
 
         w, h = template.shape[::-1]
@@ -76,7 +73,7 @@ class Matching():
         color = (0, 0, 255)
         cv2.rectangle(sourceimage, top_left, bottom_right, color, thickness=8)
 
-        detectshotPath = test_screenshot(test(test_currentPath()))[:-4] + '-detect.png'
+        detectshotPath = test_screenshot(test())[:-4] + '-detect.png'
         cv2.imwrite(detectshotPath, sourceimage)
 
         return center
