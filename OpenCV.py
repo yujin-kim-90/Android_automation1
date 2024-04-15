@@ -59,7 +59,7 @@ class Matching():
 
         w, h = template.shape[::-1]
 
-        method = eval('cv2.TM_CCOEFF')
+        method = eval('cv2.TM_CCOEFF_NORMED')
         res = cv2.matchTemplate(sourceimage, template, method)
         min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
 

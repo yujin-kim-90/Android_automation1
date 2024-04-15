@@ -66,12 +66,12 @@ def 휴대폰인증(driver):
 
 def 간편번호설정(driver):
     for i in range(2):
-        driver.save_screenshot(screenshotPath)
+        driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test()))
         for i in range(3):
             name= 'card_setting_1.png'
-            driver.tap([OpenCV.Matching.detectimage(name)])
+            driver.tap([OpenCV.Matching.detectimage(driver, name)])
             name = 'card_setting_4.png'
-            driver.tap([OpenCV.Matching.detectimage(name)])
+            driver.tap([OpenCV.Matching.detectimage(driver, name)])
             time.sleep(2)
 
 def 아이디비밀번호설정(driver):
@@ -79,20 +79,20 @@ def 아이디비밀번호설정(driver):
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""1""]").click()
     time.sleep(1)
     name='q.png'
-    driver.tap([OpenCV.Matching.detectimage(name)])
+    driver.tap([OpenCV.Matching.detectimage(driver, name)])
     #driver.find_element(By.XPATH,"//android.widget.ImageView[normalize-space(@content-desc)=""q 비읍"")]").click()
     time.sleep(1)
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""2""]").click()
     name = 'w.png'
-    driver.tap([OpenCV.Matching.detectimage(name)])
+    driver.tap([OpenCV.Matching.detectimage(driver, name)])
     #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""w 지읃""]").click()
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""3""]").click()
     name = 'e.png'
-    driver.tap([OpenCV.Matching.detectimage(name)])
+    driver.tap([OpenCV.Matching.detectimage(driver, name)])
     #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""e 디귿""]").click()
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""4""]").click()
     name = 'r.png'
-    driver.tap([OpenCV.Matching.detectimage(name)])
+    driver.tap([OpenCV.Matching.detectimage(driver, name)])
     #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""r 기역""]").click()
     # 비밀번호=["1", "q %s 비읍", "2", "w %s 지읃", "3","e %s 디귿","4","r %s 기역"]
     # for i in range(len(비밀번호)):
