@@ -83,15 +83,15 @@ def 아이디비밀번호설정(driver):
     #driver.find_element(By.XPATH,"//android.widget.ImageView[normalize-space(@content-desc)=""q 비읍"")]").click()
     time.sleep(1)
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""2""]").click()
-    name = 'w.png'
+    name = 'q.png'
     driver.tap([OpenCV.Matching.detectimage(driver, name)])
     #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""w 지읃""]").click()
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""3""]").click()
-    name = 'e.png'
+    name = 'q.png'
     driver.tap([OpenCV.Matching.detectimage(driver, name)])
     #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""e 디귿""]").click()
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""4""]").click()
-    name = 'r.png'
+    name = 'q.png'
     driver.tap([OpenCV.Matching.detectimage(driver, name)])
     #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""r 기역""]").click()
     # 비밀번호=["1", "q %s 비읍", "2", "w %s 지읃", "3","e %s 디귿","4","r %s 기역"]
