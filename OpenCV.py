@@ -41,7 +41,7 @@ def test():
     test_Directory = currentPath + '/'
     return test_Directory
 def test_screenshot(test_directory):
-    screenshotPath = test_directory + '%s-screenshot.png'
+    screenshotPath = test_directory + 'screenshot.png'
     return screenshotPath
 
 class Matching():
