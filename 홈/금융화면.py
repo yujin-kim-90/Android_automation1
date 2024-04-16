@@ -58,10 +58,12 @@ def test_case_04(driver) -> None:  # home_29
 
     driver.swipe(300, 500, 300, 100, duration=800)  # 아래로 스크롤
 
-def test_case_05(driver) -> None:  # home_29
+def test_case_05(driver) -> None:  # home_30
     설정.waitElement(driver, 변수_홈금융.단기카드대출).click()
     text1 = driver.find_element(By.XPATH, 변수_홈금융.단기카드대출).text
     assert text1 == "단기카드대출"
+
+    driver.press_keycode(4)
 
 
 
