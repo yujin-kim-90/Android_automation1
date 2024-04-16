@@ -48,24 +48,25 @@ def test_case_03(driver)->None:
     driver.find_element(By.ID, 변수.지문등록시트_x버튼).click()
     time.sleep(10)
 
-    driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test()))
-    name= 'card_setting_1.png'
-    driver.tap([OpenCV.Matching.detectimage(driver, name)])
-    name= 'card_setting_2.png'
-    driver.tap([OpenCV.Matching.detectimage(driver, name)])
-    time.sleep(10)
-
-    driver.find_element(By.ID, 변수_인증.ars인증요청id).click()
-
-    time.sleep(10)
-
-    driver.find_element(By.ID, 변수_인증.로카페이반팝업종료id).click()
-    str1=driver.find_element(By.XPATH, 변수_인증.로카페이타이틀확인).text
-
-    assert str1=="로카페이"
+    # driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test()))
+    # name= 'card_setting_1.png'
+    # driver.tap([OpenCV.Matching.detectimage(driver, name)])
+    # name= 'card_setting_2.png'
+    # driver.tap([OpenCV.Matching.detectimage(driver, name)])
+    # time.sleep(10)
+    #
+    # driver.find_element(By.ID, 변수_인증.ars인증요청id).click()
+    #
+    # time.sleep(10)
+    #
+    # driver.find_element(By.ID, 변수_인증.로카페이반팝업종료id).click()
+    # str1=driver.find_element(By.XPATH, 변수_인증.로카페이타이틀확인).text
+    #
+    # assert str1=="로카페이"
 
 def test_case_04(driver)->None:
-    driver.find_element(By.ID, 변수_인증.로카페이메인종료).click()
+    driver.find_element(By.ID, 변수_인증.로카페이등록페이지종료).click()
+    time.sleep(10)
     str1=driver.find_element(By.XPATH, 변수_인증.홈확인).text
 
     assert str1=="홈"

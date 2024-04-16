@@ -70,7 +70,7 @@ def 간편번호설정(driver):
         for i in range(3):
             name= 'card_setting_1.png'
             driver.tap([OpenCV.Matching.detectimage(driver, name)])
-            name = 'card_setting_4.png'
+            name = 'card_setting_8.png'
             driver.tap([OpenCV.Matching.detectimage(driver, name)])
             time.sleep(2)
 
