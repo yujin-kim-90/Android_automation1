@@ -1,4 +1,5 @@
 앱이름='//android.widget.TextView[@content-desc="롯데카드_개발계"]'
+앱이름운영='//android.widget.TextView[@content-desc="롯데카드"]'
 로그인xpath='//android.widget.Button[@content-desc="로그인 버튼"]'
 로그인id='com.lcacApp:id/btn_login'
 간편번호불일치xpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button'
