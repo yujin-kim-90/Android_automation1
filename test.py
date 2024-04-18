@@ -1,7 +1,4 @@
 
-
-str= ("4월 16일 결제예정금액")
-str1=str[7:13]
 #인증 > 간편번호(휴대폰 인증)
 import common
 from 변수 import 변수

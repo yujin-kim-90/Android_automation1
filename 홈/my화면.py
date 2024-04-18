@@ -42,11 +42,13 @@ def test_case_02(driver)->None:
 #tc_id: home_03
 def test_case_03(driver)->None:
     driver.find_element(By.XPATH, 변수_홈.결제예정금액이전버튼xpath).click()
-    driver.find_element(By.XPATH, 변수_홈.)
+    driver.find_element(By.XPATH, 변수_홈.즉시결제xpath).click()
+    str=driver.find_element(By.XPATH, 변수_홈.바로출금타이틀xpath).text
+    assert str=="바로출금"
 
 
 
-def test_case_04(driver)->None:
+# def test_case_04(driver)->None:
 
 
 

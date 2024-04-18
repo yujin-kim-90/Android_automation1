@@ -50,14 +50,14 @@ def test_case_02(driver)->None:
 
 #tc_id: log_36,38
 def test_case_03(driver)->None:
-    # driver.find_element(By.ID, 변수_인증.닫기버튼id).click()
-    # time.sleep(3)
-    # driver.find_element(By.ID, 변수_인증.아이디비번설정id).click()
-    # time.sleep(3)
-    # driver.find_element(By.XPATH, 변수_인증.본인인증휴대폰).click()
-    # time.sleep(3)
-    driver.find_element(By.XPATH, 변수.앱이름).click()
+    driver.find_element(By.ID, 변수_인증.닫기버튼id).click()
     time.sleep(3)
+    driver.find_element(By.ID, 변수_인증.아이디비번설정id).click()
+    time.sleep(3)
+    driver.find_element(By.XPATH, 변수_인증.본인인증휴대폰).click()
+    time.sleep(3)
+    # driver.find_element(By.XPATH, 변수.앱이름).click()
+    # time.sleep(3)
     common.휴대폰인증(driver)
     time.sleep(10)
 
@@ -65,8 +65,6 @@ def test_case_03(driver)->None:
     assert str1=="아이디/비밀번호 입력"
 
 def test_case_04(driver)-> None:
-    driver.find_element(By.XPATH, 변수.앱이름).click()
-    time.sleep(3)
     driver.find_element(By.ID, 변수_인증.아이디입력id).send_keys("autotest1")
     driver.find_element(By.ID, 변수_인증.비번입력id).click()
     common.아이디비밀번호설정(driver)
