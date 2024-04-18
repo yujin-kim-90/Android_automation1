@@ -66,5 +66,14 @@ def test_case_05(driver) -> None:  # home_30
     driver.press_keycode(4)
 
 
+def test_case_06(driver) -> None:  # home_47
+    설정.waitElement(driver, 변수_홈금융.리볼빙).click()
+    text1 = driver.find_element(By.XPATH, 변수_홈금융.리볼빙).text
+    assert text1 == "단기카드대출"
+
+    driver.press_keycode(4)
+
+
+
 
 
