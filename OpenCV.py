@@ -51,7 +51,7 @@ class Matching():
 
         wait = WebDriverWait(driver, 20)
 
-        detectImagePath = '/Users/channy/PycharmProjects/QA/Android_automation1/assets/' + name
+        detectImagePath = '/Users/yujin/PycharmProjects/Android_automation/assets/' + name
 
         driver.save_screenshot(test_screenshot(test()))
 
