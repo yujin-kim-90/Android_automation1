@@ -33,7 +33,7 @@ def test_case_01(driver)->None:
     time.sleep(10)
     #driver.find_element(By.ID, 변수.로그인id).click()
     #time.sleep(3)
-    driver.save_screenshot(screenshotPath)
+    #driver.save_screenshot(screenshotPath)
     j=1
     for i in range(5):
         for i in range(3):
