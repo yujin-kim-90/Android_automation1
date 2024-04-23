@@ -80,7 +80,7 @@ def 아이디비밀번호설정(driver):
     time.sleep(1)
     name='r.png'
     driver.tap([OpenCV.Matching.detectimage(driver, name)])
-    #driver.find_element(By.XPATH,"//android.widget.ImageView[normalize-space(@content-desc)=""q 비읍"")]").click()
+    #driver.find_element(By.XPATH,"//android.widget.ImageView[normalize-space(@content-desc)='q 비읍')]").click()
     time.sleep(1)
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""2""]").click()
     name = 'r.png'
@@ -106,4 +106,5 @@ def 아이디비밀번호설정(driver):
     time.sleep(1)
     # name = '특수문자.png'
     # driver.tap([OpenCV.Matching.detectimage(driver, name)])
-    #driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""느낌표""]").click()
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc='느낌표']").click()
+    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc='입력완료']").click()

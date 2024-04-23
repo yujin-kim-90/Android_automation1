@@ -68,8 +68,9 @@ def test_case_04(driver)-> None:
     driver.find_element(By.ID, 변수_인증.아이디입력id).send_keys("autotest1")
     driver.find_element(By.ID, 변수_인증.비번입력id).click()
     common.아이디비밀번호설정(driver)
-    # driver.find_element(By.ID, 변수_인증.비번확인id).click()
-    # common.아이디비밀번호설정(driver)
+    driver.find_element(By.ID, 변수_인증.비번확인id).click()
+    common.아이디비밀번호설정(driver)
+    driver.find_element(By.ID, 변수_인증.확인버튼id).click()
 
 
 
