@@ -37,6 +37,7 @@ def test_case_01(driver)->None:
 
 #tc_id: log_22
 def test_case_02(driver)->None:
+    time.sleep(3)
     common.휴대폰인증(driver)
     time.sleep(10)
     assert driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text == "간편번호 설정"

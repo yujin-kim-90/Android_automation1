@@ -25,17 +25,19 @@ def driver():
     driver.quit()
 
 
-#TC : 로그인 및 인증 = 카드로 인증
-def test_case_01(driver)->None: #log24
+#TC : 시작하기>카드인증
+#log_73
+def test_case_01(driver)->None:
     설정.waitElement(driver, 변수.앱이름).click()
     설정.waitElement(driver, 변수.로그인).click()
     time.sleep(4)
     설정.waitElement(driver, 변수.카드로인증).click()
 
-def test_case_02(driver)->None: #log26
-
+def test_case_02(driver)->None:
     common.카드인증(driver)
-def test_case_03(driver) -> None:  # log27
+
+
+def test_case_03(driver) -> None:  
 
     time.sleep(2) #간편번호설정=121212 / 재입력확인=121212
     # 간편번호설정 반복 횟수 설정
