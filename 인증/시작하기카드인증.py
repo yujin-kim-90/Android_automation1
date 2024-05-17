@@ -37,7 +37,7 @@ def test_case_02(driver)->None:
     common.카드인증(driver)
 
 
-def test_case_03(driver) -> None:  
+def test_case_03(driver) -> None:
 
     time.sleep(2) #간편번호설정=121212 / 재입력확인=121212
     # 간편번호설정 반복 횟수 설정
