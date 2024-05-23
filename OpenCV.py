@@ -1,4 +1,5 @@
 import pytest
+import pytesseract
 import os
 
 #import setting

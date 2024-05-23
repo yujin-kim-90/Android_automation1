@@ -1,5 +1,5 @@
-앱이름='//android.widget.TextView[@content-desc="롯데카드"]'
-앱이름운영='//android.widget.TextView[@content-desc="롯데카드"]'
+개발계앱='//android.widget.TextView[@content-desc="롯데카드_개발계"]'
+운영앱='//android.widget.TextView[@content-desc="롯데카드"]'
 로그인xpath='//android.widget.Button[@content-desc="로그인 버튼"]'
 로그인id='com.lcacApp:id/btn_login'
 간편번호불일치xpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.Button'
@@ -49,13 +49,13 @@
 카드유효기간='0125'
 카드cvc='955'
 
-#테스트계정정보_운영
-고객명='김찬은'
-생년월일='910619'
-주민뒷번호='2'
-카드번호=''
-카드유효기간=''
-카드cvc=''
+# #테스트계정정보_운영
+# 고객명='김유진'
+# 생년월일='900803'
+# 주민뒷번호='2'
+# 카드번호=''
+# 카드유효기간=''
+# 카드cvc=''
 
 #지문 관련 화면 및 버튼
 지문닫기= '//android.widget.ImageButton[@content-desc="닫기"]'
