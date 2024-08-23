@@ -11,6 +11,7 @@
 로그인_주민뒷자리Id='com.lcacApp:id/ll_mobile_phone_auth_back_resident_registration_number'
 로그인_주민뒷자리xpath='//android.widget.LinearLayout[@content-desc="주민등록번호의 뒷자리 하나를 입력하세요"]'
 로그인_통신사='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]'
+로그인_통신사_skt알뜰폰='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[4]/android.widget.TextView'
 로그인_간편번호_인증요청='com.lcacApp:id/bt_mobile_phone_auth_bottom_auth'
 로그인_간편번호_인증요청xpath='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button'
 로그인_간편번호_전체동의하고인증id='com.lcacApp:id/bt_bottom_sheet_mobile_phone_terms_auth'
@@ -42,20 +43,20 @@
 유효기간id= 'com.lcacApp:id/et_mobile_phone_auth_front_resident_registration_number'
 
 #테스트계정정보_개발
-고객명='안추도'
-생년월일='920124'
-주민뒷번호='1'
-카드번호='5342929700036003'
-카드유효기간='0125'
-카드cvc='955'
+# 고객명='안추도'
+# 생년월일='920124'
+# 주민뒷번호='1'
+# 카드번호='5342929700036003'
+# 카드유효기간='0125'
+# 카드cvc='955'
 
 # #테스트계정정보_운영
-# 고객명='김유진'
-# 생년월일='900803'
-# 주민뒷번호='2'
-# 카드번호=''
-# 카드유효기간=''
-# 카드cvc=''
+고객명='김유진'
+생년월일='900803'
+주민뒷번호='2'
+카드번호=''
+카드유효기간=''
+카드cvc=''
 
 #지문 관련 화면 및 버튼
 지문닫기= '//android.widget.ImageButton[@content-desc="닫기"]'

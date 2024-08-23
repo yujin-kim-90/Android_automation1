@@ -49,20 +49,21 @@ def 휴대폰인증(driver):
     driver.find_element(By.ID, 변수.로그인_이름Id).send_keys(변수.고객명)
     driver.find_element(By.ID, 변수.로그인_주민번호Id).send_keys(변수.생년월일)
     driver.find_element(By.ID, 변수.로그인_주민뒷자리Id).click()
+
     time.sleep(3)
 
     #driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test_currentPath()))
-    name = '1_keypad_login.png'
+    name = '3_keypad_login.png'
     driver.tap([OpenCV.Matching.detectimage(driver,name)])
 
-    driver.find_element(By.XPATH, 변수.로그인_통신사).click()
+    driver.find_element(By.XPATH, 변수.로그인_통신사_skt알뜰폰).click()
     driver.find_element(By.ID, 변수.로그인_간편번호_인증요청).click()
     time.sleep(5)
     driver.find_element(By.ID, 변수.로그인_간편번호_전체동의하고인증id).click()
     time.sleep(10)
     # driver.find_element(By.ID, 변수.인증번호_발송_id).click()
     # time.sleep(3)
-    driver.find_element(By.ID, 변수.로그인_간편번호_인증번호입력id).send_keys("111111")
+    #driver.find_element(By.ID, 변수.로그인_간편번호_인증번호입력id).send_keys("111111")
 
 
 def 간편번호설정(driver):

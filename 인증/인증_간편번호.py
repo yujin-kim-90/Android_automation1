@@ -1,11 +1,14 @@
 #인증 > 간편번호(휴대폰 인증)
+#import OpenCV
+import pytest
+import time
+# import os
+# import sys
+# sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+
 import common
 from 변수 import 변수
 from 변수 import 변수_인증
-import OpenCV
-import pytest
-import time
-import os
 
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
@@ -26,7 +29,7 @@ def driver():
 
 #tc_id: log_20
 def test_case_01(driver)->None:
-    driver.find_element(By.XPATH, 변수.개발계앱).click()
+    driver.find_element(By.XPATH, 변수.운영앱).click()
     time.sleep(20)
     driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
     time.sleep(10)
