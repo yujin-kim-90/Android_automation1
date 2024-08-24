@@ -31,13 +31,13 @@ def driver():
 def test_case_01(driver)->None:
     driver.find_element(By.XPATH, 변수.운영앱).click()
     time.sleep(20)
-    driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
-    time.sleep(10)
+    # driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
+    # time.sleep(10)
     driver.find_element(By.ID, 변수.로그인id).click()
     time.sleep(3)
 
     assert driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text == "간편번호 설정"
-
+''
 #tc_id: log_22
 def test_case_02(driver)->None:
     time.sleep(3)

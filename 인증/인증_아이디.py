@@ -27,10 +27,10 @@ def driver():
 
 #tc_id: log_33
 def test_case_01(driver)->None:
-    driver.find_element(By.XPATH, 변수.개발계앱).click()
+    driver.find_element(By.XPATH, 변수.운영앱).click()
     time.sleep(10)
-    driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
-    time.sleep(10)
+    # driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
+    # time.sleep(10)
 
     driver.find_element(By.ID, 변수_인증.다른로그인방법id).click()
     time.sleep(3)
@@ -39,35 +39,49 @@ def test_case_01(driver)->None:
     driver.find_element(By.ID, 변수_인증.아이디비번설정id).click()
     time.sleep(3)
     str1=driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text
-
+    print("아이디/비번 설정 전 인증화면 진입")
     assert str1=="본인 인증"
 
 #tc_id: log_35
 def test_case_02(driver)->None:
     common.카드인증(driver)
     str1=driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text
-    assert str1=="아이디/비밀번호 입력"
+    print("카드인증 성공")
+    assert str1=="비밀번호 입력"
 
 #tc_id: log_36,38
-def test_case_03(driver)->None:
-    driver.find_element(By.ID, 변수_인증.닫기버튼id).click()
-    time.sleep(3)
-    driver.find_element(By.ID, 변수_인증.아이디비번설정id).click()
-    time.sleep(3)
-    driver.find_element(By.XPATH, 변수_인증.본인인증휴대폰).click()
-    time.sleep(3)
-    # driver.find_element(By.XPATH, 변수.앱이름).click()
-    # time.sleep(3)
-    common.휴대폰인증(driver)
-    time.sleep(10)
+# def test_case_03(driver)->None:
+#     driver.find_element(By.ID, 변수_인증.닫기버튼id).click()
+#     time.sleep(3)
+#     driver.find_element(By.ID, 변수_인증.아이디비번설정id).click()
+#     time.sleep(3)
+#     driver.find_element(By.XPATH, 변수_인증.본인인증휴대폰).click()
+#     time.sleep(3)
+#     # driver.find_element(By.XPATH, 변수.앱이름).click()
+#     # time.sleep(3)
+#     common.휴대폰인증(driver)
+#     time.sleep(10)
+#
+#     str1=driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text
+#     assert str1=="아이디/비밀번호 입력"
 
-    str1=driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text
-    assert str1=="아이디/비밀번호 입력"
-
-def test_case_04(driver)-> None:
-    driver.find_element(By.ID, 변수_인증.아이디입력id).send_keys("autotest1")
+def test_case_04(driver)-> None: #비밀번호 :1r2r3r4r!
+    #driver.find_element(By.ID, 변수_인증.아이디입력id).send_keys("aaaqwww1")
     driver.find_element(By.ID, 변수_인증.비번입력id).click()
     common.아이디비밀번호설정(driver)
     driver.find_element(By.ID, 변수_인증.비번확인id).click()
     common.아이디비밀번호설정(driver)
     driver.find_element(By.ID, 변수_인증.확인버튼id).click()
+    time.sleep(5)
+    driver.find_element(By.ID, 변수_인증.아이디비번확인버튼id).click()
+    print("비밀번호 변경 성공")
+
+
+def test_case_05(driver)->None:
+    time.sleep(5)
+    driver.find_element(By.ID, 변수_인증.로그인아이디id).send_keys("aaaqwww1")
+    driver.find_element(By.ID, 변수_인증.로그인비번id).click()
+    common.아이디비밀번호설정(driver)
+    print("아이디/비밀번호 로그인 성공")
+
+

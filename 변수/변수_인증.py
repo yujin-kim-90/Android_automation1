@@ -27,3 +27,8 @@ ars인증요청id='com.lcacApp:id/bt_ars_auth_bottom_for_test'
 비번입력id='com.lcacApp:id/tv_id_password_input_change_password'
 비번확인id='com.lcacApp:id/tv_id_password_input_change_password_confirm'
 확인버튼id='com.lcacApp:id/bt_id_password_input_confirm'
+아이디비번확인버튼id='com.lcacApp:id/bt_default_setting_complete_confirm'
+아이디설정완료문구id='com.lcacApp:id/tv_default_setting_complete_msg'
+
+로그인아이디id='com.lcacApp:id/et_id'
+로그인비번id='com.lcacApp:id/tk_editText'

@@ -80,7 +80,7 @@ class Matching():
         # # 원본 이미지에 매칭된 영역을 사각형으로 표시
         # cv2.rectangle(sourceimage, top_left, bottom_right, (0, 255, 0), 2)
 
-        w, h, _ = template.shape[::-1]
+        w, h = template.shape[::-1]
 
         method = eval('cv2.TM_CCOEFF_NORMED')
         res = cv2.matchTemplate(sourceimage, template, method)
