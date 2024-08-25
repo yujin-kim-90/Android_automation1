@@ -51,10 +51,10 @@ def 휴대폰인증(driver):
     driver.find_element(By.ID, 변수.로그인_주민뒷자리Id).click()
 
     time.sleep(3)
+    driver.press_keycode(9) # 안드로이드 키보드 2
+    #driver.press_keycode(8) # 안드로이드 키보드 1
 
-    #driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test_currentPath()))
-    name = '2_keypad_login.png'
-    driver.tap([OpenCV.Matching.detectimage(driver,name)])
+
 
     driver.find_element(By.XPATH, 변수.로그인_통신사_skt알뜰폰).click()
     driver.find_element(By.ID, 변수.로그인_간편번호_인증요청).click()
@@ -102,3 +102,12 @@ def 아이디비밀번호설정(driver):
 
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc='느낌표']").click()
     driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc='입력완료']").click()
+
+def 간편번호입력(driver):
+    driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test()))
+    for i in range(3):
+        name = 'card_setting_1.png'
+        driver.tap([OpenCV.Matching.detectimage(driver, name)])
+        name = 'card_setting_8.png'
+        driver.tap([OpenCV.Matching.detectimage(driver, name)])
+        time.sleep(2)

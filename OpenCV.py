@@ -80,23 +80,31 @@ class Matching():
         # # 원본 이미지에 매칭된 영역을 사각형으로 표시
         # cv2.rectangle(sourceimage, top_left, bottom_right, (0, 255, 0), 2)
 
-        w, h = template.shape[::-1]
+        w, h, _ = template.shape[::-1]
 
         method = eval('cv2.TM_CCOEFF_NORMED')
         res = cv2.matchTemplate(sourceimage, template, method)
         min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
 
-        print('max_val: %d' % max_val)
+        top_left, top_right = max_loc
+        endX, endY = top_left + w, top_right + h
+        center=((top_left+endX)/2,(top_right+endY)/2)
 
-        top_left = max_loc
-        bottom_right = (top_left[0] + w, top_left[1] + h)
 
-        center = (top_left[0] + int(w/2), top_left[1] + int(h/2))
+        #center = (top_left[0]+bottom_right, top_left[1] + int(h/2))
 
         color = (0, 0, 255)
-        cv2.rectangle(sourceimage, top_left, bottom_right, color, thickness=8)
+        cv2.rectangle(sourceimage,(top_left, top_right), (endX, endY), color, thickness=8)
 
         detectshotPath = test_screenshot(test())[:-4] + '-detect.png'
         cv2.imwrite(detectshotPath, sourceimage)
+
+        # result = cv2.matchTemplate(sourceimage, template, cv2.TM_CCOEFF_NORMED)
+        # min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+        #
+        # startX, startY = max_loc  # 만약 cv.TM_SQDIFF 혹은 cv.TM_SQDIFF_NORMED를 사용했을경우 최솟값을 사용해야한다.
+        # endX, endY = startX + w, startY + h
+        # center=((startX+endX)/2,(startY+endY)/2)
+        # center=cv2.rectangle(sourceimage, (startX, startY), (endX, endY), (0, 0, 255), 1)
 
         return center
