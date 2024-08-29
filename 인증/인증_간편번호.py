@@ -31,8 +31,8 @@ def driver():
 def test_case_01(driver)->None:
     driver.find_element(By.XPATH, 변수.운영앱).click()
     time.sleep(20)
-    driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
-    time.sleep(10)
+    # driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
+    # time.sleep(10)
     driver.find_element(By.ID, 변수.로그인id).click()
     time.sleep(3)
 

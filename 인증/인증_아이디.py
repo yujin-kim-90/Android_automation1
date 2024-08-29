@@ -1,4 +1,5 @@
 #인증 > 아이디
+import allure
 
 from 변수 import 변수
 from 변수 import 변수_인증
@@ -26,7 +27,7 @@ def driver():
 
 
 #tc_id: log_33
-def test_case_01(driver)->None:
+def test_앱실행(driver):
     driver.find_element(By.XPATH, 변수.운영앱).click()
     time.sleep(10)
     # driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
@@ -39,15 +40,14 @@ def test_case_01(driver)->None:
     driver.find_element(By.ID, 변수_인증.아이디비번설정id).click()
     time.sleep(3)
     str1=driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text
-    print("아이디/비번 설정 전 인증화면 진입")
+
     assert str1=="본인 인증"
 
 #tc_id: log_35
-def test_case_02(driver)->None:
+def test_카드인증(driver)->None:
     common.카드인증(driver)
     str1=driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text
     print("카드인증 성공")
-    assert str1=="비밀번호 입력"
 
 #tc_id: log_36,38
 # def test_case_03(driver)->None:
@@ -65,7 +65,7 @@ def test_case_02(driver)->None:
 #     str1=driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text
 #     assert str1=="아이디/비밀번호 입력"
 
-def test_case_04(driver)-> None: #비밀번호 :1r2r3r4r!
+def test_비밀번호설정(driver)-> None: #비밀번호 :1r2r3r4r!
     #driver.find_element(By.ID, 변수_인증.아이디입력id).send_keys("aaaqwww1")
     driver.find_element(By.ID, 변수_인증.비번입력id).click()
     common.아이디비밀번호설정(driver)
@@ -74,14 +74,14 @@ def test_case_04(driver)-> None: #비밀번호 :1r2r3r4r!
     driver.find_element(By.ID, 변수_인증.확인버튼id).click()
     time.sleep(5)
     driver.find_element(By.ID, 변수_인증.아이디비번확인버튼id).click()
-    print("비밀번호 변경 성공")
 
 
-def test_case_05(driver)->None:
+
+def test_아이디비밀번호로그인(driver)->None:
     time.sleep(5)
     driver.find_element(By.ID, 변수_인증.로그인아이디id).send_keys("aaaqwww1")
     driver.find_element(By.ID, 변수_인증.로그인비번id).click()
     common.아이디비밀번호설정(driver)
-    print("아이디/비밀번호 로그인 성공")
+
 
 

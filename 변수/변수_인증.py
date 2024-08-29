@@ -10,7 +10,10 @@ ars인증요청id='com.lcacApp:id/bt_ars_auth_bottom_for_test'
 
 다른로그인방법id='com.lcacApp:id/tv_other_login'
 로그인방법_아이디='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[3]/android.widget.TextView'
+로그인방법_인증서id='com.lcacApp:id/ll_login_select_cert'
 아이디비번설정id='com.lcacApp:id/tv_login_id_pw_change'
+공동인증서로그인id='com.lcacApp:id/tv_public_cert_login'
+공동인증서확인id='com.lcacApp:id/bt_certification_auth_confirm'
 
 카드번호입력id='com.lcacApp:id/tv_card_auth_full_card_number'
 카드인증버튼id='com.lcacApp:id/bt_card_auth_full_auth'

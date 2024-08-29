@@ -1,5 +1,6 @@
 from 변수 import 변수
 from 변수 import 변수_인증
+from 변수 import secure_keypad
 import time
 import os
 import OpenCV
@@ -111,3 +112,19 @@ def 간편번호입력(driver):
         name = 'card_setting_8.png'
         driver.tap([OpenCV.Matching.detectimage(driver, name)])
         time.sleep(2)
+
+def 공동인증서비번(driver):
+    driver.find_element(By.XPATH, secure_keypad.q).click()
+    driver.find_element(By.XPATH, secure_keypad.w).click()
+    driver.find_element(By.XPATH, secure_keypad.e).click()
+    driver.find_element(By.XPATH, secure_keypad.r).click()
+    driver.find_element(By.XPATH, secure_keypad.p).click()
+    driver.find_element(By.XPATH, secure_keypad.o).click()
+    driver.find_element(By.XPATH, secure_keypad.i).click()
+    driver.find_element(By.XPATH, secure_keypad.u).click()
+    driver.find_element(By.XPATH, secure_keypad.숫자1).click()
+    driver.find_element(By.XPATH, secure_keypad.특수문자변경).click()
+    driver.find_element(By.XPATH, secure_keypad.특수문자).click()
+    driver.find_element(By.XPATH, secure_keypad.입력완료).click()
+
+
