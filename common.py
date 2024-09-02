@@ -80,29 +80,17 @@ def 간편번호설정(driver):
 def 아이디비밀번호설정(driver):
     time.sleep(1)
 
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""1""]").click()
-    name='r.png'
-    driver.tap([OpenCV.Matching.detectimage(driver, name)])
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""2""]").click()
-    name = 'r.png'
-    driver.tap([OpenCV.Matching.detectimage(driver, name)])
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""3""]").click()
-    name = 'r.png'
-    driver.tap([OpenCV.Matching.detectimage(driver, name)])
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc=""4""]").click()
-    name = 'r.png'
-    driver.tap([OpenCV.Matching.detectimage(driver, name)])
-    # 비밀번호=["1", "q %s 비읍", "2", "w %s 지읃", "3","e %s 디귿","4","r %s 기역"]
-    # for i in range(len(비밀번호)):
-    #     str="//android.widget.ImageView[@content-desc="""+비밀번호[i]+"]"""
-    #     driver.find_element(By.XPATH,str).click()
-    time.sleep(1)
-
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc='특수문자변경']").click()
-    time.sleep(1)
-
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc='느낌표']").click()
-    driver.find_element(By.XPATH,"//android.widget.ImageView[@content-desc='입력완료']").click()
+    driver.find_element(By.XPATH, secure_keypad.숫자1).click()
+    driver.find_element(By.XPATH, secure_keypad.r).click()
+    driver.find_element(By.XPATH, secure_keypad.숫자2).click()
+    driver.find_element(By.XPATH, secure_keypad.r).click()
+    driver.find_element(By.XPATH, secure_keypad.숫자3).click()
+    driver.find_element(By.XPATH, secure_keypad.r).click()
+    driver.find_element(By.XPATH, secure_keypad.숫자4).click()
+    driver.find_element(By.XPATH, secure_keypad.r).click()
+    driver.find_element(By.XPATH, secure_keypad.특수문자변경).click()
+    driver.find_element(By.XPATH, secure_keypad.특수문자).click()
+    driver.find_element(By.XPATH, secure_keypad.입력완료).click()
 
 def 간편번호입력(driver):
     driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test()))
@@ -128,3 +116,8 @@ def 공동인증서비번(driver):
     driver.find_element(By.XPATH, secure_keypad.입력완료).click()
 
 
+def swipe_action(driver):
+    deviceSize=driver.get_window_size()
+    screenWidth= deviceSize['width']
+    screenHeight= deviceSize['height']
+    driver.swipe(start_x=0, start_y=screenHeight*0.7,end_x=0, end_y=screenHeight*0.2,duration=50)

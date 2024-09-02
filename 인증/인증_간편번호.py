@@ -31,8 +31,8 @@ def driver():
 def test_case_01(driver)->None:
     driver.find_element(By.XPATH, 변수.운영앱).click()
     time.sleep(20)
-    # driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
-    # time.sleep(10)
+    driver.find_element(By.ID, 변수.시작하기_로그인Id).click()
+    time.sleep(10)
     driver.find_element(By.ID, 변수.로그인id).click()
     time.sleep(3)
 
@@ -44,11 +44,12 @@ def test_case_02(driver)->None:
     common.휴대폰인증(driver)
     time.sleep(10)
     #assert driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text == "간편번호 설정"
+    print("\n휴대폰 인증 완료")
 
 #tc_id: log_23
 def test_case_03(driver)->None:
     common.간편번호설정(driver)
-
+    print("\n간편번호 설정 완료")
     driver.find_element(By.ID, 변수.지문등록시트_x버튼).click()
     time.sleep(10)
 

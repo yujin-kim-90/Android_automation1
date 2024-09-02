@@ -60,3 +60,4 @@
 
 #지문 관련 화면 및 버튼
 지문닫기= '//android.widget.ImageButton[@content-desc="닫기"]'
+
