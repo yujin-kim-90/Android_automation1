@@ -44,7 +44,7 @@ def 카드인증(driver):
     driver.find_element(By.XPATH, '//android.widget.ImageView[@content-desc="5"]').click()
     driver.find_element(By.XPATH, '//android.widget.ImageView[@content-desc="2"]').click()
 
-    time.sleep(10)
+    time.sleep(5)
 
 def 휴대폰인증(driver):
     driver.find_element(By.ID, 변수.로그인_이름Id).send_keys(변수.고객명)
@@ -69,17 +69,13 @@ def 휴대폰인증(driver):
 
 def 간편번호설정(driver):
     for i in range(2):
-        driver.save_screenshot(OpenCV.test_screenshot(OpenCV.test()))
         for i in range(3):
-            name= 'card_setting_1.png'
-            driver.tap([OpenCV.Matching.detectimage(driver, name)])
-            name = 'card_setting_8.png'
-            driver.tap([OpenCV.Matching.detectimage(driver, name)])
-            time.sleep(2)
+            driver.find_element(By.XPATH, secure_keypad.숫자1).click()
+            driver.find_element(By.XPATH, secure_keypad.숫자2).click()
 
-def 아이디비밀번호설정(driver):
+
+def 비밀번호입력(driver):
     time.sleep(1)
-
     driver.find_element(By.XPATH, secure_keypad.숫자1).click()
     driver.find_element(By.XPATH, secure_keypad.r).click()
     driver.find_element(By.XPATH, secure_keypad.숫자2).click()

@@ -47,7 +47,7 @@ def test_앱실행(driver):
 def test_카드인증(driver)->None:
     common.카드인증(driver)
     str1=driver.find_element(By.ID, 변수_인증.간편번호설정문구확인id).text
-    print("카드인증 성공")
+    print("\n카드인증 성공")
 
 #tc_id: log_36,38
 # def test_case_03(driver)->None:

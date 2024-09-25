@@ -15,7 +15,7 @@ ars인증요청id='com.lcacApp:id/bt_ars_auth_bottom_for_test'
 공동인증서로그인id='com.lcacApp:id/tv_public_cert_login'
 공동인증서확인id='com.lcacApp:id/bt_certification_auth_confirm'
 
-카드번호입력id='com.lcacApp:id/tv_card_auth_full_card_number'
+
 카드인증버튼id='com.lcacApp:id/bt_card_auth_full_auth'
 
 유효기간월id='com.lcacApp:id/et_card_auth_full_expiry_date_month'
