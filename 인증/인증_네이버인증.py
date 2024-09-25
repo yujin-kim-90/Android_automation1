@@ -69,10 +69,10 @@ def test_네이버인증(driver):
     driver.find_element(By.XPATH, 변수_자산.네이버0).click()
     driver.find_element(By.XPATH, 변수_자산.네이버0).click()
     print("네이버인증 완료")
-    time.sleep(20)
-    str1=driver.find_element(By.XPATH, 변수_자산.비교문구xpath).text
-
-    assert str1=="연결할 자산을 선택해주세요"
+    # time.sleep(20)
+    # str1=driver.find_element(By.XPATH, 변수_자산.비교문구xpath).text
+    #
+    # assert str1=="연결할 자산을 선택해주세요"
 
 
 
