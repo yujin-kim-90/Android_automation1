@@ -17,6 +17,7 @@ MO인증확인='com.lcacApp:id/buttonBottomSheet'
 관심사다음버튼='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.widget.Button[2]'
 
 아이디로그인버튼='com.lcacApp:id/textButtonGoToLogin'
+아이디로그인수단선택='com.lcacApp:id/ll_login_select_id'
 아이디비밀번호설정='com.lcacApp:id/tv_login_id_pw_change'
 카드번호입력id='com.lcacApp:id/tv_card_auth_full_card_number'
 홈text='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[1]/android.widget.TextView'

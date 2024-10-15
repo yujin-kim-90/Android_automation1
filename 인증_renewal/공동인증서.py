@@ -1,3 +1,5 @@
+#
+
 #인증renewal > 간편번호(휴대폰 인증)
 #import OpenCV
 import pytest
@@ -36,6 +38,7 @@ def test_공동인증서수단변경(driver)->None:
     driver.find_element(By.ID, 변수_인증renewal.아이디로그인버튼).click()
     time.sleep(10)
     driver.find_element(By.ID, 변수_인증renewal.다른로그인방법).click()
+    time.sleep(3)
     driver.find_element(By.ID, 변수_인증renewal.공동인증서선택).click()
     time.sleep(3)
 def test_공동인증서로그인(driver)->None:

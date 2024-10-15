@@ -32,7 +32,9 @@ def driver():
 def test_아이디로그인진입(driver)->None:
     driver.find_element(By.XPATH, 변수.운영앱).click()
     time.sleep(10)
-    driver.find_element(By.ID, 변수_인증renewal.아이디로그인버튼).click()
+    driver.find_element(By.ID, 변수_인증renewal.다른로그인방법).click()
+    time.sleep(3)
+    driver.find_element(By.ID, 변수_인증renewal.아이디로그인수단선택).click()
     time.sleep(10)
     driver.find_element(By.ID, 변수_인증renewal.아이디비밀번호설정).click()
 
