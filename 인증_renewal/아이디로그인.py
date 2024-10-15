@@ -37,6 +37,7 @@ def test_아이디로그인진입(driver)->None:
     driver.find_element(By.ID, 변수_인증renewal.아이디비밀번호설정).click()
 
 def test_카드인증(driver)->None:
+    time.sleep(3)
     common.카드인증(driver)
 def test_비밀번호설정(driver)-> None: #비밀번호 :1r2r3r4r!
     #driver.find_element(By.ID, 변수_인증.아이디입력id).send_keys("aaaqwww1")

@@ -51,13 +51,13 @@ def test_본인인증(driver)->None:
     driver.find_element(By.ID, 변수_인증renewal.인증요청).click()
     driver.find_element(By.ID, 변수_인증renewal.휴대폰인증동의).click()
     time.sleep(3)
-    driver.find_element(By.ID, 변수_인증renewal.확인).click()
-    time.sleep(10)
+    # driver.find_element(By.ID, 변수_인증renewal.확인).click()
+    # time.sleep(10)
 
 def test_MO인증(driver)->None:
     # driver.find_element(By.XPATH, 변수.운영앱).click()
     # time.sleep(3)
-    common.xyTouch(driver, 487, 1572)
+    #common.xyTouch(driver, 487, 1572)
     driver.find_element(By.ID, 변수_인증renewal.MO인증확인).click()
     driver.find_element(By.ID,"com.samsung.android.messaging:id/send_button_icon").click()
     driver.press_keycode(4) # 이전 2번 눌러야해서 키코드 4 2개 넣음

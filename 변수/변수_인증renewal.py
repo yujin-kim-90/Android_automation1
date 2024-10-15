@@ -25,3 +25,9 @@ MO인증확인='com.lcacApp:id/buttonBottomSheet'
 간편번호버튼='com.lcacApp:id/ll_login_select_number'
 로그인버튼='com.lcacApp:id/btn_login'
 간편번호설정='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout'
+
+#공동인증서 관련 변수
+다른로그인방법='com.lcacApp:id/tv_other_login'
+공동인증서선택='com.lcacApp:id/ll_login_select_cert'
+공동인증서로그인='com.lcacApp:id/tv_public_cert_login'
+공동인증서로그인확인='com.lcacApp:id/bt_certification_auth_confirm'

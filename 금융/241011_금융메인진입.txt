@@ -2,17 +2,11 @@
 platform darwin -- Python 3.9.6, pytest-8.1.1, pluggy-1.4.0 -- /Users/yujin/PycharmProjects/Android_automation/.venv/bin/python
 cachedir: .pytest_cache
 metadata: {'Python': '3.9.6', 'Platform': 'macOS-14.2.1-arm64-arm-64bit', 'Packages': {'pytest': '8.1.1', 'pluggy': '1.4.0'}, 'Plugins': {'html': '4.1.1', 'metadata': '3.1.1', 'allure-pytest': '2.13.5'}}
-rootdir: /Users/yujin/PycharmProjects/Android_automation/인증
+rootdir: /Users/yujin/PycharmProjects/Android_automation/금융
 plugins: html-4.1.1, metadata-3.1.1, allure-pytest-2.13.5
-collecting ... collected 3 items
+collecting ... collected 1 item
 
-인증_네이버인증.py::test_자산진입 자산 탭 진입 완료
-PASSED
-인증_네이버인증.py::test_자산추가 PASSED
-인증_네이버인증.py::test_네이버인증 네이버인증 선택
-네이버인증서 비밀번호 입력
-네이버인증 완료
-PASSED
+금융메인.py::test_금융메인 PASSED
 
 =============================== warnings summary ===============================
 ../.venv/lib/python3.9/site-packages/urllib3/__init__.py:35
@@ -20,4 +14,4 @@ PASSED
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-=================== 3 passed, 1 warning in 153.61s (0:02:33) ===================
+======================== 1 passed, 1 warning in 27.34s =========================

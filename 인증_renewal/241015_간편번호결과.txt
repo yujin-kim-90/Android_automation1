@@ -1,0 +1,94 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.1.1, pluggy-1.4.0 -- /Users/yujin/PycharmProjects/Android_automation/.venv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.9.6', 'Platform': 'macOS-14.2.1-arm64-arm-64bit', 'Packages': {'pytest': '8.1.1', 'pluggy': '1.4.0'}, 'Plugins': {'html': '4.1.1', 'metadata': '3.1.1', 'allure-pytest': '2.13.5'}}
+rootdir: /Users/yujin/PycharmProjects/Android_automation/인증_renewal
+plugins: html-4.1.1, metadata-3.1.1, allure-pytest-2.13.5
+collecting ... collected 5 items
+
+간편번호설정.py::test_본인인증 PASSED
+간편번호설정.py::test_MO인증 PASSED
+간편번호설정.py::test_로카페이설정 PASSED
+간편번호설정.py::test_간편번호설정 PASSED
+간편번호설정.py::test_앱메인호출 FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_앱메인호출 __________________________________
+
+driver = <appium.webdriver.webdriver.WebDriver (session="1ab43aae-f964-4b85-abff-1aedd19ed933")>
+
+    def test_앱메인호출(driver)->None:
+        driver.find_element(By.ID, 변수_인증renewal.닫기).click()
+        time.sleep(20)
+    
+>       driver.find_element(By.XPATH, 변수_인증renewal.관심사_1).click()
+
+간편번호설정.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../.venv/lib/python3.9/site-packages/appium/webdriver/webdriver.py:383: in find_element
+    return self.execute(RemoteCommand.FIND_ELEMENT, {'using': by, 'value': value})['value']
+../.venv/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py:347: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <appium.webdriver.errorhandler.MobileErrorHandler object at 0x105a20b80>
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"An element could not be located on the page u...droid-driver/lib/commands/find.js:75:11)\\n    at processTicksAndRejections (internal/process/task_queues.js:85:5)"}}'}
+
+    def check_response(self, response: Dict[str, Any]) -> None:
+        """
+        https://www.w3.org/TR/webdriver/#errors
+        """
+        payload = response.get('value', '')
+        if isinstance(payload, dict):
+            payload_dict = payload
+        else:
+            try:
+                payload_dict = json.loads(payload)
+            except (json.JSONDecodeError, TypeError):
+                return
+            if not isinstance(payload_dict, dict):
+                return
+        value = payload_dict.get('value')
+        if not isinstance(value, dict):
+            return
+        error = value.get('error')
+        if not error:
+            return
+    
+        message = value.get('message', error)
+        stacktrace = value.get('stacktrace', '')
+        # In theory, we should also be checking HTTP status codes.
+        # Java client, for example, prints a warning if the actual `error`
+        # value does not match to the response's HTTP status code.
+        exception_class: Type[sel_exceptions.WebDriverException] = ERROR_TO_EXC_MAPPING.get(
+            error, sel_exceptions.WebDriverException
+        )
+        if exception_class is sel_exceptions.WebDriverException and message:
+            if message == 'No such context found.':
+                exception_class = appium_exceptions.NoSuchContextException
+            elif message == 'That command could not be executed in the current context.':
+                exception_class = appium_exceptions.InvalidSwitchToTargetException
+    
+        if exception_class is sel_exceptions.UnexpectedAlertPresentException:
+            raise sel_exceptions.UnexpectedAlertPresentException(
+                msg=message,
+                stacktrace=format_stacktrace(stacktrace),
+                alert_text=value.get('data'),
+            )
+>       raise exception_class(msg=message, stacktrace=format_stacktrace(stacktrace))
+E       selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+E       Stacktrace:
+E       NoSuchElementError: An element could not be located on the page using the given search parameters.
+E           at AndroidUiautomator2Driver.findElOrEls (/Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-android-driver/lib/commands/find.js:75:11)
+E           at processTicksAndRejections (internal/process/task_queues.js:85:5)
+
+../.venv/lib/python3.9/site-packages/appium/webdriver/errorhandler.py:125: NoSuchElementException
+=============================== warnings summary ===============================
+../.venv/lib/python3.9/site-packages/urllib3/__init__.py:35
+  /Users/yujin/PycharmProjects/Android_automation/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED 간편번호설정.py::test_앱메인호출 - selenium.common.exceptions.NoSuchEl...
+============== 1 failed, 4 passed, 1 warning in 88.31s (0:01:28) ===============
